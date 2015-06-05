@@ -175,7 +175,7 @@ init(_) ->
     {ok,
      #state{
         ets_tab = ets_tab()
-        }
+       }
     }.
 
 -spec ets_tab() -> ets:tab().
