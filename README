@@ -1,0 +1,73 @@
+memo is a simple memoization server that grew out of noticing a pattern in
+code I was refactoring.
+
+Building
+--------
+
+$ rebar compile
+
+or
+
+$ erlc +debug_info -o ebin src/*.erl
+
+
+Testing
+-------
+
+$ rebar ct
+
+
+Dialyzing
+---------
+
+Build the PLT
+$ rebar build-plt
+
+Run Dialyzer
+$ rebar dialyze
+
+
+By using abbreviated commands, you can also (0) build-plt, (1) compile,
+(2) ct (test), and (3) dialyze the code like this:
+
+$ rebar b-p
+$ rebar co ct di
+
+This is shorter to type. See 'rebar help' for a description of
+abbreviated command support.
+
+
+Using
+-----
+
+Assuming the memo application has been started, you can use it as follows:
+
+Instead of
+
+    Res = mod:expensive_function(A1, A2, [List1])
+
+you call
+
+    Res = memo:call(mod, expensive_function, [A1, A2, [List1]])
+
+or instead of
+
+    Res = Fun(A1, A2, [List1])
+
+you call
+
+    Res = memo:call(Fun, [A1, A2, [List1]])
+
+or instead of
+
+    Res = mod:expensive_function(A1, A2, [List1])
+
+you call
+
+    Res = memo:call(fun mod:expensive_function/3, [A1, A2, [List1]])
+
+and any subsequent call will fetch the cached result and avoid the computation.
+
+This is of course only useful for expensive computations that are known to
+produce the same result given same arguments. It's worth mentioning that your
+call should be side-effect free, as naturally those won't be replayed.
