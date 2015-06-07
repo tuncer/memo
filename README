@@ -1,8 +1,8 @@
 memo is a simple memoization server that grew out of noticing a pattern in
 code I was refactoring.
 
-Building
---------
+Build
+-----
 
 $ rebar compile
 
@@ -11,14 +11,19 @@ or
 $ erlc +debug_info -o ebin src/*.erl
 
 
-Testing
--------
+Documentation
+-------------
+
+$ rebar doc
+
+Test
+----
 
 $ rebar ct
 
 
-Dialyzing
----------
+Dialyze
+-------
 
 Build the PLT
 $ rebar build-plt
