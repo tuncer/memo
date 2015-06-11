@@ -1,7 +1,7 @@
 {application, memo,
  [
   {description, "memoization server"},
-  {vsn, "0.1"},
+  {vsn, "1.0"},
   {modules,
    [
     memo,
