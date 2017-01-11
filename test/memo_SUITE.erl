@@ -1,7 +1,7 @@
 %%% -*- mode: erlang;erlang-indent-level: 4;indent-tabs-mode: nil -*-
 %%% ex: ft=erlang ts=4 sw=4 et
 %%%
-%%% Copyright (c) 2015 Tuncer Ayaz
+%%% Copyright (c) 2015-2017 Tuncer Ayaz
 %%%
 %%% Permission to use, copy, modify, and/or distribute this software
 %%% for any purpose with or without fee is hereby granted, provided

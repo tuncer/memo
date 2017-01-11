@@ -3,13 +3,13 @@
 %%%
 %%%-------------------------------------------------------------------
 %%% @author Tuncer Ayaz
-%%% @copyright 2015, Tuncer Ayaz
+%%% @copyright 2015-2017, Tuncer Ayaz
 %%% @doc
 %%% memoization server
 %%% @end
 %%%-------------------------------------------------------------------
 %%%
-%%% Copyright (c) 2015 Tuncer Ayaz
+%%% Copyright (c) 2015-2017 Tuncer Ayaz
 %%%
 %%% Permission to use, copy, modify, and/or distribute this software
 %%% for any purpose with or without fee is hereby granted, provided
